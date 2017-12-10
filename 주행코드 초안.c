@@ -15,14 +15,14 @@ int main() {
 
 		if (sdata.IRSensor[3]>20) {
 
-                        
-			Steering(1); //자회전
+
+			Steering(1);
 			Go(300, 300);
 			delay(50);
 
 			if (sdata.IRSensor[2]>20) {
-                       
-				Steering(1); //자회전
+
+				Steering(1);
 				Go(300, 300);
 				delay(300);
 
@@ -30,11 +30,11 @@ int main() {
 
 			if (sdata.IRSensor[2]>300) {
 
-				Steering(3); //우회전
+				Steering(3);
 				Go(-300, -300);
 				delay(700);
 
-				Steering(2); //전진
+				Steering(2);
 				Go(300, 300);
 				delay(50);
 			}
@@ -46,13 +46,13 @@ int main() {
 
 		if (sdata.IRSensor[3]<20) {
 
-			Steering(2); //전진
+			Steering(2);
 			Go(300, 300);
 			delay(50);
 
 			if (sdata.IRSensor[2]>20) {
 
-				Steering(1); //전진
+				Steering(1);
 				Go(300, 300);
 				delay(300);
 
@@ -60,11 +60,11 @@ int main() {
 
 			if (sdata.IRSensor[2]>300) {
 
-				Steering(3); //우회전
+				Steering(3);
 				Go(-300, -300);
 				delay(700);
 
-				Steering(2); //전진
+				Steering(2);
 				Go(300, 300);
 				delay(50);
 			}
