@@ -1,11 +1,12 @@
 #include "Altino.h"
 #include <stdio.h>
 
+SensorData sdata;
+
 int main() {
 	Open(szPort);
 	while (1) {
 
-		SensorData sdata;
 		Sendbuf[21] = 10;
 		sdata = Sensor(1);
 
@@ -14,8 +15,7 @@ int main() {
 		printf("IR5 : %d, IR6 : %d\n", sdata.IRSensor[4], sdata.IRSensor[5]);
 
 		if (sdata.IRSensor[3]>20) {
-
-                        
+                     
 			Steering(1); //자회전
 			Go(300, 300);
 			delay(50);
